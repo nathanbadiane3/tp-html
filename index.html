@@ -5,39 +5,103 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <style>
+        .containt {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 25px;
+            width: 90%;
+            margin: 40px auto;
+        }
+
+        .bloc {
+            border: 2px solid black;
+            background-color: white;
+            padding: 10px;
+            border-radius: 12px;
+        }
+
+        .bloc img {
+            width: 100%;
+            overflow: hidden;
+            height: 200px;
+            object-fit: cover;
+        }
+
+        .bloc h2 {
+            font-size: 48px;
+        }
+
+        .bloc p {
+            line-height: 1.7;
+        }
+        @media(max-width:820px){
+            .containt{
+grid-template-columns: repeat(2,1fr);
+            }
+           
+        }
+         @media(max-width:430px){
+            .containt{
+grid-template-columns: repeat(1,1fr);
+            }
+           
+        }
+    </style>
 </head>
 
 <body>
-    <h1>titre de h1</h1>
-    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatem quibusdam blanditiis aliquam sint veritatis
-        illum, voluptas nisi vel? Vitae aliquid quas velit voluptatem illum saepe quae accusantium tempora itaque hic
-        nihil necessitatibus, alias totam consequuntur quam? Ipsa consectetur magni a quidem et consequatur quis,
-        suscipit culpa blanditiis atque minima, quia rem, aperiam dolore esse at obcaecati maxime eveniet quae. Cum,
-        sapiente saepe porro asperiores impedit dolor harum necessitatibus vitae et quisquam quis facilis nemo
-        molestiae, accusamus eos error accusantium repellat doloremque neque veniam quos voluptatibus, dignissimos
-        aperiam. Aut error recusandae sequi reprehenderit quisquam natus, sint iusto magni odit, repellat similique
-        facilis, distinctio mollitia impedit fugit? Facilis dicta minima aliquid explicabo nihil impedit commodi libero,
-        repellat magnam in deserunt nobis incidunt saepe sapiente velit quo labore voluptatibus fugiat harum doloremque
-        esse officiis! Voluptatum ab consequatur id esse minus fugiat aut laborum facere fuga, dicta ex nam sapiente ea
-        laboriosam. Quam hic eaque eveniet labore fuga. Impedit facilis beatae nisi iusto veritatis sunt nam unde ipsam
-        nesciunt illum vero placeat consequuntur qui nemo quam sapiente molestias voluptates porro vel, odio ad
-        voluptate nihil quo. Quia animi et vitae ab nemo numquam tenetur nostrum quisquam molestiae hic, ratione
-        commodi! Earum nesciunt animi temporibus voluptatibus nobis hic, incidunt maiores pariatur eligendi? Praesentium
-        minus laborum magni delectus illum possimus, corporis eligendi, tempore in, architecto rerum veritatis et.
-        Quaerat autem dicta odio ad deserunt quos eligendi maxime facere. Vero nostrum iusto reiciendis nobis, quam nam
-        dolor tempora quod voluptatem, ex minus iste nihil ab illum omnis!</p>
-    <h2>titre de h2</h2>
-    <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Laborum corporis obcaecati accusamus cupiditate illo
-        aspernatur, dolor asperiores deserunt alias iure voluptatem doloremque eaque deleniti illum minus ipsa sint
-        nobis, fuga reiciendis, quod numquam dolores voluptate. Voluptatem fugiat, velit debitis rem, reiciendis
-        perferendis assumenda consequatur, at error quis libero nesciunt quas quae optio vel in tempore cumque
-        repellendus? Exercitationem, nostrum. Adipisci sit asperiores neque porro iste, voluptatem dolor tempore
-        obcaecati doloribus laudantium accusamus, architecto odit nobis ex! Labore saepe minima fuga a voluptatibus modi
-        tempore omnis at ratione nemo rerum ea itaque nesciunt incidunt vitae repudiandae fugiat, beatae corporis
-        asperiores dolore quo natus repellat et in. Eaque cum quae voluptatibus exercitationem at corporis quam quo
-        velit dolor. Nulla nemo inventore ut eligendi, nobis quod, maxime, sapiente quasi sint eum sit. Sequi adipisci
-        cupiditate officia suscipit rerum? Delectus eligendi consequatur debitis quia quam tenetur veniam qui culpa!
-        Sequi magnam repellendus neque ea!</p>
+    <section class="containt">
+        <div class="bloc">
+            <img src="imagev.jpg" alt="">
+            <h2>une femme</h2>
+            <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Aperiam quasi, iusto tenetur recusandae qui
+                .</p>
+        </div>
+        <div class="bloc">
+            <img src="carte.jpg" alt="">
+            <h2>une femme</h2>
+            <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Aperiam quasi, iusto tenetur recusandae qui
+                </p>
+        </div>
+        <div class="bloc">
+            <img src="imagev.jpg" alt="">
+            <h2>une femme</h2>
+            <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Aperiam quasi, iusto tenetur recusandae qui
+                </p>
+        </div>
+        <div class="bloc">
+            <img src="fruit.jpg" alt="">
+            <h2>une femme</h2>
+            <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Aperiam quasi, iusto tenetur recusandae qui
+               </p>
+        </div>
+        <div class="bloc">
+            <img src="pho1.jpg" alt="">
+            <h2>une femme</h2>
+            <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Aperiam quasi, iusto tenetur recusandae qui
+               p>
+        </div>
+        <div class="bloc">
+            <img src="pho2.jpg" alt="">
+            <h2>une femme</h2>
+            <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Aperiam quasi, iusto tenetur recusandae qui
+               </p>
+        </div>
+        <div class="bloc">
+            <img src="imagev.jpg" alt="">
+            <h2>une femme</h2>
+            <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Aperiam quasi, iusto tenetur recusandae qui
+              </p>
+        </div>
+        <div class="bloc">
+            <img src="imagev.jpg" alt="">
+            <h2>une femme</h2>
+            <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Aperiam quasi, iusto tenetur recusandae qui
+              </p>
+        </div>
+
+    </section>
 </body>
 
 </html>
