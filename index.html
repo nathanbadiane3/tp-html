@@ -5,7 +5,9 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    
     <style>
+
         
         .menu {
             display: flex;
@@ -17,6 +19,7 @@
             top: 0;
             border-bottom: 2px solid black;
             background-color: white;
+            z-index: 1000;
         }
 
         body {
@@ -24,13 +27,133 @@
             background-color: silver;
             position: relative;
         }
+        .menu-checkbox {
+  display: none;
+}
+ 
+.menu-toggle {
+  display: none;
+  width: 48px;
+  height: 48px;
+  border: 1px solid #d9e3f2;
+  border-radius: 14px;
+  background: #ffffff;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+}
 
-        .mo {
-            display: flex;
-            width: 30%;
-            justify-content: space-around;
-            max-width: auto;
+
+
+
+.menu-toggle span,
+.menu-toggle::before,
+.menu-toggle::after {
+  content: "";
+  display: block;
+  width: 20px;
+  height: 2px;
+  background: #24324a;
+  border-radius: 999px;
+  transition: 0.3s ease;
+  position: relative;
+}
+ 
+.menu-toggle::before {
+  position: absolute;
+  transform: translateY(-6px);
+}
+ 
+.menu-toggle::after {
+  position: absolute;
+  transform: translateY(6px);  
+}
+.menu-checkbox:checked ~ .menu-toggle span {
+  opacity: 0;
+}
+ 
+.menu-checkbox:checked ~ .menu-toggle::before {
+  transform: rotate(45deg);
+}
+ 
+.menu-checkbox:checked ~ .menu-toggle::after {
+  transform: rotate(-45deg);
+}
+
+
+        .nav{
+             display: flex;
+              align-items: center;
+              gap: 10px;
+              flex-wrap: wrap;
         }
+         @media( max-width:820px){
+           body {
+    padding-top: 84px;
+  }
+ 
+  .menu-inner {
+    min-height: 84px;
+  }
+
+            .menu-toggle {
+    display: inline-flex;
+    position: relative;
+    z-index: 1002;
+    
+  }
+ 
+  .nav {
+    position: fixed;
+    top: 64px;
+    left: 16px;
+    right: 16px;
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    gap: 2px;
+    padding: 3px;
+    background: rgba(255, 255, 255, 0.98);
+    border: 1px solid #d9e3f2;
+    border-radius: 20px;
+    box-shadow: 0 14px 30px rgba(24, 48, 87, 0.08);
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(-2px);
+    transition: 0.3s ;
+    
+  }
+ 
+  .menu-checkbox:checked  .nav {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0);
+  }
+ 
+  .nav a {
+    width: 100%;
+    text-align: center;
+    background: #f8fbff;
+  }
+}
+
+        
+        .nav a {
+          text-decoration: none;
+           color: #24324a;
+            padding: 10px 16px;
+           font-size: 14px;
+         font-weight: 600;
+          border-radius: 999px;
+           transition: 0.3s ease;
+        }
+        .nav a:hover,
+       .nav a:focus-visible {
+        background: #e8f1ff;
+         color: #2f5aa8;
+              outline: none;
+            }
+
 
         .petitcercle {
             border-radius: 15px;
@@ -46,16 +169,7 @@
             text-align: center;
             margin-right: 10px;
             margin-top: 15px;
-        }
-
-        .petitcarre {
-
-            width: auto;
-            
-
-
-        }
-         
+        }  
 
 
 
@@ -85,7 +199,43 @@
         .texte{
             flex: 1;
         }
+.btn{
+ display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 27px;
+  padding: 14px 24px;
+  border-radius: 14px;
+  text-decoration: none;
+  font-weight: 700;
+  transition: 0.4s ease;
+  border: 1px solid transparent;
+  text-align: center;
 
+}
+.btn-voir{
+    background: linear-gradient(135deg,#2f5aa8, #79aaff);
+    color: #ffffff;
+    box-shadow: 0 10px 20px rgba(47, 90, 168, 0,2);
+}
+.btn-voir:hover,
+.btn-voir:focus-visible{
+transform: translateY(-2px);
+box-shadow: 0 14px 24px rgba(47, 90, 168, 0,26);
+outline: none;
+}
+.btn-con {
+  border-color: #cfe0fa;
+  color: #2b4774;
+  background: #ffffff;
+}
+ 
+.btn-con:hover,
+.btn-con:focus-visible {
+  background: #f3f8ff;
+  outline: none;
+  transform: translateY(-2px);
+}
 
 
       
@@ -240,15 +390,14 @@
             height: auto;
             width: 93%;
             margin-top: 15px;
-            margin: 20px auto;
+            
             border-radius: 12px;
             background-color: white;
 
         }
 
         .grosrectangle2 p {
-            margin: 20px auto;
-            margin-left: 400px;
+            text-align: center;
         }
 
         .PA {
@@ -261,13 +410,19 @@
             margin: auto;
             background-color: transparent;
             border: none;
+            border-radius: 10px;
+        }
+        .PAA:hover{
+            background-color: aqua;
         }
 
         .PAAA {
             height: 35px;
             border-radius: 15px;
-            background-color: aqua;
+            background-color: linear-gradient(blue,white) ;
         }
+        
+        
 
         .PAAAA {
             background-color: white;
@@ -296,6 +451,10 @@
             border-radius: 12px;
             background-color: aliceblue;
         }
+        .petitrec7 p{
+            margin: 5px auto;
+            text-align: center      ;
+        }
 
         .grocarre1 {
             display: flex;
@@ -310,6 +469,9 @@
             text-align: center;
 
 
+        }
+        .groscarre h3{
+            color: #2b4774;
         }
 
         .grocarre {
@@ -334,46 +496,43 @@
             text-align: center;
         }
 
-        h1 {
-            color: blue;
-        }
-
-        h2 {
-            color: blue;
-        }
-
-        h3 {
-            color: blue;
-        }
+       
     </style>
 </head>
 
 <body>
+     <input type="checkbox" id="menuToggle" class="menu-checkbox" />
+ 
+    
+    <label for="menuToggle" class="menu-toggle" aria-label="Ouvrir le menu">
+      <span></span>
+    </label>
+
     
     <div class="menu">
         <div class="petitcercle">
             <h3 class="PA">AN</h3>
         </div>
-        <div class="mo">
-            <div class="petitcarre"><button class="PAA">Acceuil</button></div>
-            <div class="petitcarre"><button class="PAA">A propos</button></div>
-            <div class="petitcarre"><button class="PAA">projets</button></div>
-            <div class="petitcarre"><button class="PAA">Profil</button></div>
-            <div class="petitcarre"><button class="PAA">Contact</button></div>
-        </div>
+       <nav class="nav">
+            <a href="#Acceuil">Acceuil</a>
+            <a href="#A propos">A propos</a>
+             <a href="#Projets">projets</a>
+            <a href="#Profil">Profil</a>
+            <a href="contact.html">Contact</a>
+        </nav>
 
     </div>
 
     <div class="grosrectangle">
 
         <div class="texte">
-            <div class="petitrec7"></div>
+            <div class="petitrec7"><p>Mon porto</p></div>
              <h1 class="titre"><strong> Construire mon parcours <br> avec passion,creativite et ambition</strong></h1>
              <h4>Bonjour,je suis nathan badiane,etudiant en imformatique,les jeux videos <br> surtout call of duty.je me
                 forme
                 dans le codage car je me dis que dans le <br>futur l'IA vas dominer .</h4>
-             <button class="PAAA">Voir mes projets </button>
-             <button class="PAAAA">Me contacter</button>
+            <a href="#Projets" class="btn btn-voir">Voir mes projets</a>
+            <a href="contact.html" class="btn btn-con">Me contacter</a>
              <div class="grocarre1">
                 <div class="grocarre"></div>
                 <div class="grocarre"></div>
